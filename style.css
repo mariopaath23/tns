@@ -1,0 +1,253 @@
+body{ 
+font: 14px arial, sans-serif; 
+}
+
+/*UI Button*/
+.buttonUI {
+	background-color:#44c767;
+	border-radius:10px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:8px 38px;
+	text-decoration:none;
+}
+.buttonUI:hover {
+	background-color:#5cbf2a;
+}
+.buttonUI:active {
+	position:relative;
+	top:1px;
+}
+
+.buttonUI_small {
+	background-color:#44c767;
+	border-radius:13px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:8px 31px;
+	text-decoration:none;
+}
+.buttonUI_small:hover {
+	background-color:#5cbf2a;
+}
+.buttonUI_small:active {
+	position:relative;
+	top:1px;
+}
+
+
+/*Text Properties*/
+h1{
+	font-size: 40px;
+	font-weight: bold;
+}
+
+h2{
+	font-size: 25px;
+	font-weight: bold;
+}
+
+/*---Header---*/
+.header {
+	position: static;
+	display: block;
+	width: auto;
+	height: 65px;
+	top: 0px;
+  	background-image: url(img/header_banner.jpg);
+  	background-size:     cover;
+ 	background-repeat:   no-repeat;
+  	background-position: center center;
+  	text-align: left;
+  	padding-left: 50px;
+  	padding-right: 0px;
+}
+
+.header2{
+	position: static;
+	display: inline-block;
+	padding-left: 25px;
+}
+
+.kanan{
+	position: static;
+	display: inline;
+}
+
+
+/*---Login---*/
+
+.layout_login{
+width: 1366px;
+height: 768px;
+
+display: grid;
+  grid:
+    "logo" 40px
+    "login" 1fr
+    / 240px;
+   /*background*/
+  background-image: url(img/DSC_1336.JPG);
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+.wrapper1{ 
+background: #f1f7fe; 
+width: 500px;
+height: 800px; 
+padding: 20px;
+}
+
+.logo1{
+  grid-area: logo;
+}
+
+.login{
+  grid-area: login;
+  position: sticky;
+  top : 0;
+}
+
+/*---Beranda---*/
+
+.img{
+	float: left;
+}
+
+
+.container_beranda {  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 768px;
+  gap: 0px 14px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Mulai-Absen Lihat-Data Kamus Tentang";
+}
+
+.Kamus { 
+	grid-area: Kamus;
+	border-radius: 25px;
+}
+
+.Lihat-Data { 
+	grid-area: Lihat-Data;
+	border-radius: 25px; 
+}
+
+.Mulai-Absen { 
+	grid-area: Mulai-Absen; 
+	border-radius: 25px;
+}
+
+.Tentang{
+  grid-area: Tentang;
+  border-radius: 25px;
+}
+
+.img-anim {
+	height: 500px;
+	overflow: hidden;
+}
+
+.img-anim--blur img {
+  transition: transform 1s, filter 2s ease-in-out;
+  filter: blur(2px);
+  transform: scale(1.2);
+}
+
+.img-anim--blur:hover img {
+  filter: blur(0);
+  transform: scale(1);
+}
+
+.tengah_teks{
+	text-align: center;
+}
+
+/*Lihat Data*/
+
+.container_ld {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 768px;
+  gap: 0px 5px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "data_table details";
+}
+
+/*Kehadiran*/
+
+.header_kehadiran {
+  display: grid; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 50% 50%; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "."
+    "."; 
+  text-align: center;
+}
+
+
+table{
+	width: 700px;
+	padding: 0px;
+}
+
+th{
+	text-align: center;
+	background-color: #04AA6D;
+	color: white;
+}
+td{
+	border-bottom: 2px solid #b5b5b5;
+}
+
+/*Tentang Kami*/
+
+.container_tk{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 384px 384px;
+  gap: 0px 0px;
+  grid-auto-flow: column;
+  grid-template-areas:
+    "bg-image profile";
+}
+
+.bg-image{
+  background-image: url(img/tentangkami.jpeg);
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center;
+  height: 384px;
+  filter: brightness(50%);
+  filter: blur(2px);
+}
+
+.bg-text{
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+
+}
